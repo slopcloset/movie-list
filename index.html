@@ -1,0 +1,1699 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Plex Movie Availability</title>
+
+<style>
+
+    * {
+        box-sizing: border-box;
+    }
+
+    :root {
+        --bg: #111;
+        --panel: #1b1b1b;
+        --panel-hover: #242424;
+        --border: #333;
+        --text: #eee;
+        --muted: #999;
+        --accent: #e5b400;
+        --available: #72c472;
+        --unavailable: #d96b6b;
+        --link: #6da9ff;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100%;
+    }
+
+    body {
+        background: var(--bg);
+        color: var(--text);
+
+        font-family:
+            system-ui,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            sans-serif;
+    }
+
+    .container {
+        width: min(1200px, 94%);
+        margin: 0 auto;
+        padding: 35px 0 60px;
+    }
+
+
+    /* ---------------------------------------------------------
+       Header
+       --------------------------------------------------------- */
+
+    header {
+        margin-bottom: 30px;
+    }
+
+    h1 {
+        margin: 0 0 8px;
+
+        font-size: 32px;
+        font-weight: 600;
+    }
+
+    .subtitle {
+        color: var(--muted);
+        font-size: 14px;
+    }
+
+
+    /* ---------------------------------------------------------
+       Summary
+       --------------------------------------------------------- */
+
+    .summary {
+        display: grid;
+
+        grid-template-columns:
+            repeat(3, minmax(0, 1fr));
+
+        gap: 12px;
+
+        margin-bottom: 25px;
+    }
+
+    .summary-card {
+        background: var(--panel);
+
+        border: 1px solid var(--border);
+        border-radius: 8px;
+
+        padding: 18px 20px;
+    }
+
+    .summary-label {
+        color: var(--muted);
+
+        font-size: 13px;
+
+        margin-bottom: 5px;
+    }
+
+    .summary-value {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+
+    /* ---------------------------------------------------------
+       Controls
+       --------------------------------------------------------- */
+
+    .controls {
+        display: flex;
+
+        gap: 10px;
+
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        margin-bottom: 20px;
+    }
+
+    .search {
+        flex: 1;
+
+        min-width: 250px;
+    }
+
+    .search input {
+        width: 100%;
+
+        padding: 11px 14px;
+
+        border: 1px solid var(--border);
+        border-radius: 6px;
+
+        background: var(--panel);
+        color: var(--text);
+
+        font-size: 15px;
+
+        outline: none;
+    }
+
+    .search input:focus {
+        border-color: var(--accent);
+    }
+
+    button {
+        border: 1px solid var(--border);
+
+        background: var(--panel);
+        color: var(--text);
+
+        padding: 10px 14px;
+
+        border-radius: 6px;
+
+        cursor: pointer;
+
+        font-size: 14px;
+    }
+
+    button:hover {
+        background: var(--panel-hover);
+    }
+
+    button.active {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    select {
+        border: 1px solid var(--border);
+
+        background: var(--panel);
+        color: var(--text);
+
+        padding: 10px 12px;
+
+        border-radius: 6px;
+
+        font-size: 14px;
+    }
+
+
+    /* ---------------------------------------------------------
+       Results
+       --------------------------------------------------------- */
+
+    .result-count {
+        color: var(--muted);
+
+        font-size: 13px;
+
+        margin-bottom: 10px;
+    }
+
+    .movie-list {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .movie {
+        background: var(--panel);
+
+        border: 1px solid var(--border);
+
+        border-radius: 7px;
+
+        overflow: hidden;
+    }
+
+    .movie-header {
+        display: flex;
+
+        align-items: center;
+
+        gap: 15px;
+
+        padding: 13px 16px;
+
+        cursor: pointer;
+    }
+
+    .movie-header:hover {
+        background: var(--panel-hover);
+    }
+
+    .status {
+        flex: 0 0 10px;
+
+        width: 10px;
+        height: 10px;
+
+        border-radius: 50%;
+    }
+
+    .status.available {
+        background: var(--available);
+    }
+
+    .status.unavailable {
+        background: var(--unavailable);
+    }
+
+    .movie-title {
+        flex: 1;
+
+        min-width: 0;
+    }
+
+    .title {
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .year {
+        color: var(--muted);
+
+        margin-left: 5px;
+    }
+
+    .plex-count {
+        color: var(--muted);
+
+        font-size: 13px;
+
+        white-space: nowrap;
+    }
+
+    .arrow {
+        color: var(--muted);
+
+        font-size: 13px;
+
+        transition: transform 0.15s;
+    }
+
+    .movie.open .arrow {
+        transform: rotate(90deg);
+    }
+
+
+    /* ---------------------------------------------------------
+       Expanded movie details
+       --------------------------------------------------------- */
+
+    .movie-details {
+        display: none;
+
+        border-top: 1px solid var(--border);
+
+        padding: 20px;
+    }
+
+    .movie.open .movie-details {
+        display: block;
+    }
+
+
+    /* ---------------------------------------------------------
+       TMDB information
+       --------------------------------------------------------- */
+
+    .movie-info {
+        display: grid;
+
+        grid-template-columns:
+            150px minmax(0, 1fr);
+
+        gap: 22px;
+
+        margin-bottom: 22px;
+    }
+
+    .poster-container {
+        width: 150px;
+    }
+
+    .poster {
+        display: block;
+
+        width: 150px;
+
+        aspect-ratio: 2 / 3;
+
+        object-fit: cover;
+
+        border-radius: 5px;
+
+        background: #111;
+
+        border: 1px solid var(--border);
+    }
+
+    .poster-placeholder {
+        width: 150px;
+
+        aspect-ratio: 2 / 3;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        text-align: center;
+
+        padding: 15px;
+
+        background: #151515;
+
+        border: 1px solid var(--border);
+
+        border-radius: 5px;
+
+        color: var(--muted);
+
+        font-size: 13px;
+    }
+
+    .movie-metadata {
+        min-width: 0;
+    }
+
+    .metadata-title {
+        font-size: 22px;
+
+        font-weight: 600;
+
+        margin-bottom: 12px;
+    }
+
+    .metadata-stats {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 8px;
+
+        margin-bottom: 18px;
+    }
+
+    .metadata-badge {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 5px;
+
+        padding: 5px 9px;
+
+        background: #151515;
+
+        border: 1px solid var(--border);
+
+        border-radius: 5px;
+
+        font-size: 13px;
+    }
+
+    .metadata-label {
+        color: var(--muted);
+    }
+
+    .score {
+        color: var(--accent);
+
+        font-weight: 600;
+    }
+
+    .imdb-link {
+        color: var(--link);
+
+        text-decoration: none;
+
+        font-weight: 500;
+    }
+
+    .imdb-link:hover {
+        text-decoration: underline;
+    }
+
+    .plot {
+        color: #ddd;
+
+        font-size: 14px;
+
+        line-height: 1.65;
+
+        max-width: 800px;
+    }
+
+    .plot-empty {
+        color: var(--muted);
+
+        font-size: 14px;
+    }
+
+
+    /* ---------------------------------------------------------
+       Original search title
+       --------------------------------------------------------- */
+
+    .input-title {
+        color: var(--muted);
+
+        font-size: 13px;
+
+        margin-bottom: 15px;
+
+        padding-bottom: 12px;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+
+    /* ---------------------------------------------------------
+       Plex availability
+       --------------------------------------------------------- */
+
+    .availability-heading {
+        font-size: 14px;
+
+        font-weight: 600;
+
+        margin-bottom: 12px;
+    }
+
+    .location {
+        border-left: 2px solid var(--available);
+
+        padding: 5px 0 5px 12px;
+
+        margin-bottom: 10px;
+    }
+
+    .server {
+        font-weight: 600;
+    }
+
+    .library {
+        color: var(--muted);
+
+        font-size: 13px;
+
+        margin-top: 3px;
+    }
+
+    .plex-meta {
+        color: var(--muted);
+
+        font-size: 12px;
+
+        margin-top: 4px;
+    }
+
+    .not-found {
+        color: var(--unavailable);
+
+        font-size: 14px;
+    }
+
+
+    /* ---------------------------------------------------------
+       Empty / loading / error
+       --------------------------------------------------------- */
+
+    .message {
+        background: var(--panel);
+
+        border: 1px solid var(--border);
+
+        border-radius: 7px;
+
+        padding: 30px;
+
+        text-align: center;
+
+        color: var(--muted);
+    }
+
+
+    /* ---------------------------------------------------------
+       Responsive
+       --------------------------------------------------------- */
+
+    @media (max-width: 700px) {
+
+        .container {
+            width: 92%;
+
+            padding-top: 25px;
+        }
+
+        h1 {
+            font-size: 26px;
+        }
+
+        .summary {
+            grid-template-columns: 1fr;
+        }
+
+        .movie-header {
+            gap: 10px;
+        }
+
+        .plex-count {
+            display: none;
+        }
+
+        .movie-details {
+            padding: 15px;
+        }
+
+        .movie-info {
+            grid-template-columns: 100px minmax(0, 1fr);
+
+            gap: 15px;
+        }
+
+        .poster-container {
+            width: 100px;
+        }
+
+        .poster {
+            width: 100px;
+        }
+
+        .poster-placeholder {
+            width: 100px;
+        }
+
+        .metadata-title {
+            font-size: 18px;
+        }
+
+        .plot {
+            font-size: 13px;
+        }
+    }
+
+    @media (max-width: 450px) {
+
+        .movie-info {
+            grid-template-columns: 1fr;
+        }
+
+        .poster-container {
+            width: 130px;
+        }
+
+        .poster {
+            width: 130px;
+        }
+
+        .poster-placeholder {
+            width: 130px;
+        }
+    }
+
+</style>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+
+<header>
+
+    <h1>
+        Plex Movie Availability
+    </h1>
+
+    <div
+        class="subtitle"
+        id="subtitle"
+    >
+        Loading...
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     Summary
+     ========================================================= -->
+
+<section class="summary">
+
+    <div class="summary-card">
+
+        <div class="summary-label">
+            Movies
+        </div>
+
+        <div
+            class="summary-value"
+            id="total"
+        >
+            —
+        </div>
+
+    </div>
+
+
+    <div class="summary-card">
+
+        <div class="summary-label">
+            Available
+        </div>
+
+        <div
+            class="summary-value"
+            id="available"
+        >
+            —
+        </div>
+
+    </div>
+
+
+    <div class="summary-card">
+
+        <div class="summary-label">
+            Not Available
+        </div>
+
+        <div
+            class="summary-value"
+            id="unavailable"
+        >
+            —
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     Controls
+     ========================================================= -->
+
+<section class="controls">
+
+    <div class="search">
+
+        <input
+            type="search"
+            id="search"
+            placeholder="Search movies..."
+            autocomplete="off"
+        >
+
+    </div>
+
+
+    <button
+        data-filter="all"
+        class="filter active"
+    >
+        All
+    </button>
+
+
+    <button
+        data-filter="available"
+        class="filter"
+    >
+        Available
+    </button>
+
+
+    <button
+        data-filter="unavailable"
+        class="filter"
+    >
+        Not Available
+    </button>
+
+
+    <select id="sort">
+
+        <option value="title">
+            Title
+        </option>
+
+        <option value="year">
+            Year
+        </option>
+
+        <option value="availability">
+            Availability
+        </option>
+
+    </select>
+
+</section>
+
+
+<div
+    class="result-count"
+    id="result-count"
+></div>
+
+
+<!-- =========================================================
+     Movie list
+     ========================================================= -->
+
+<main
+    class="movie-list"
+    id="movie-list"
+>
+
+    <div class="message">
+        Loading Plex results...
+    </div>
+
+</main>
+
+
+</div>
+
+<script>
+
+    let movies = [];
+
+    let currentFilter = "all";
+
+    let currentSearch = "";
+
+
+    /*
+     * ------------------------------------------------------------
+     * Load plex-results.json
+     * ------------------------------------------------------------
+     */
+
+    async function loadResults() {
+
+        try {
+
+            const response =
+                await fetch("plex-results.json");
+
+            if (!response.ok) {
+
+                throw new Error(
+                    `HTTP ${response.status}`
+                );
+
+            }
+
+
+            const data =
+                await response.json();
+
+
+            movies =
+                data.movies || [];
+
+
+            updateSummary(data);
+
+            render();
+
+
+        } catch (error) {
+
+            console.error(error);
+
+
+            document.getElementById(
+                "movie-list"
+            ).innerHTML = `
+
+                <div class="message">
+
+                    <strong>
+                        Could not load plex-results.json
+                    </strong>
+
+                    <br><br>
+
+                    ${escapeHtml(error.message)}
+
+                    <br><br>
+
+                    If you opened index.html directly,
+                    try running a local web server.
+
+                </div>
+
+            `;
+
+        }
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * Update summary statistics
+     * ------------------------------------------------------------
+     */
+
+    function updateSummary(data) {
+
+        const total =
+            data.movies_requested ??
+            movies.length;
+
+
+        const found =
+            data.movies_found ??
+            movies.filter(
+                movie => movie.available
+            ).length;
+
+
+        const notFound =
+            data.movies_not_found ??
+            total - found;
+
+
+        document.getElementById(
+            "total"
+        ).textContent =
+            total;
+
+
+        document.getElementById(
+            "available"
+        ).textContent =
+            found;
+
+
+        document.getElementById(
+            "unavailable"
+        ).textContent =
+            notFound;
+
+
+        document.getElementById(
+            "subtitle"
+        ).textContent =
+            `${found} of ${total} movies available`;
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * Return movies matching current controls
+     * ------------------------------------------------------------
+     */
+
+    function getFilteredMovies() {
+
+        let result =
+            [...movies];
+
+
+        /*
+         * Availability filter.
+         */
+
+        if (
+            currentFilter === "available"
+        ) {
+
+            result =
+                result.filter(
+                    movie => movie.available
+                );
+
+        } else if (
+            currentFilter === "unavailable"
+        ) {
+
+            result =
+                result.filter(
+                    movie => !movie.available
+                );
+
+        }
+
+
+        /*
+         * Search.
+         */
+
+        if (currentSearch) {
+
+            const query =
+                currentSearch.toLowerCase();
+
+
+            result =
+                result.filter(movie => {
+
+                    const title =
+                        movie.title || "";
+
+
+                    const input =
+                        movie.input || "";
+
+
+                    const year =
+                        movie.year
+                            ? String(movie.year)
+                            : "";
+
+
+                    const imdb =
+                        movie.imdb_id ||
+                        movie.tmdb?.imdb_id ||
+                        "";
+
+
+                    return (
+
+                        title
+                            .toLowerCase()
+                            .includes(query)
+
+                        ||
+
+                        input
+                            .toLowerCase()
+                            .includes(query)
+
+                        ||
+
+                        year.includes(query)
+
+                        ||
+
+                        imdb
+                            .toLowerCase()
+                            .includes(query)
+
+                    );
+
+                });
+
+        }
+
+
+        /*
+         * Sort.
+         */
+
+        const sort =
+            document.getElementById(
+                "sort"
+            ).value;
+
+
+        if (sort === "title") {
+
+            result.sort(
+                (a, b) =>
+                    (a.title || "")
+                        .localeCompare(
+                            b.title || ""
+                        )
+            );
+
+
+        } else if (
+            sort === "year"
+        ) {
+
+            result.sort(
+                (a, b) =>
+                    (a.year || 0) -
+                    (b.year || 0)
+            );
+
+
+        } else if (
+            sort === "availability"
+        ) {
+
+            result.sort(
+                (a, b) =>
+                    Number(b.available) -
+                    Number(a.available)
+            );
+
+        }
+
+
+        return result;
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * Render movie list
+     * ------------------------------------------------------------
+     */
+
+    function render() {
+
+        const list =
+            document.getElementById(
+                "movie-list"
+            );
+
+
+        const visible =
+            getFilteredMovies();
+
+
+        document.getElementById(
+            "result-count"
+        ).textContent =
+            `${visible.length} movie${
+                visible.length === 1
+                    ? ""
+                    : "s"
+            } shown`;
+
+
+        if (!visible.length) {
+
+            list.innerHTML = `
+
+                <div class="message">
+                    No movies match your search.
+                </div>
+
+            `;
+
+            return;
+
+        }
+
+
+        list.innerHTML =
+            visible
+                .map(renderMovie)
+                .join("");
+
+
+        /*
+         * Attach click handlers after rendering.
+         */
+
+        list.querySelectorAll(
+            ".movie-header"
+        ).forEach(header => {
+
+            header.addEventListener(
+                "click",
+                () => {
+
+                    header
+                        .closest(".movie")
+                        .classList.toggle(
+                            "open"
+                        );
+
+                }
+            );
+
+        });
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * Render one movie
+     * ------------------------------------------------------------
+     */
+
+    function renderMovie(movie) {
+
+        const available =
+            Boolean(movie.available);
+
+
+        const locations =
+            movie.available_on || [];
+
+
+        const title =
+            movie.title ||
+            movie.input ||
+            "Unknown";
+
+
+        const year =
+            movie.year
+                ? `(${movie.year})`
+                : "";
+
+
+        const count =
+            locations.length;
+
+
+        /*
+         * TMDB metadata.
+         *
+         * The Python script will populate this object.
+         */
+
+        const tmdb =
+            movie.tmdb || {};
+
+
+        const overview =
+            tmdb.overview || "";
+
+
+        const posterUrl =
+            tmdb.poster_url || "";
+
+
+        const mpaaRating =
+            tmdb.mpaa_rating || "";
+
+
+        const score =
+            typeof tmdb.score === "number"
+                ? tmdb.score
+                : null;
+
+
+        const imdbId =
+            tmdb.imdb_id ||
+            movie.imdb_id ||
+            "";
+
+
+        let details = "";
+
+
+        /*
+         * --------------------------------------------------------
+         * Original search title
+         * --------------------------------------------------------
+         */
+
+        if (
+            movie.input &&
+            movie.input !== movie.title
+        ) {
+
+            details += `
+
+                <div class="input-title">
+
+                    Original search:
+                    ${escapeHtml(movie.input)}
+
+                </div>
+
+            `;
+
+        }
+
+
+        /*
+         * --------------------------------------------------------
+         * TMDB movie information
+         * --------------------------------------------------------
+         */
+
+        details += `
+
+            <div class="movie-info">
+
+                <div class="poster-container">
+
+                    ${
+                        posterUrl
+
+                            ? `
+
+                                <img
+                                    class="poster"
+                                    src="${escapeHtml(posterUrl)}"
+                                    alt="Poster for ${escapeHtml(title)}"
+                                    loading="lazy"
+                                >
+
+                              `
+
+                            : `
+
+                                <div class="poster-placeholder">
+
+                                    No poster
+                                    available
+
+                                </div>
+
+                              `
+                    }
+
+                </div>
+
+
+                <div class="movie-metadata">
+
+                    <div class="metadata-title">
+
+                        ${escapeHtml(title)}
+
+                        ${
+                            movie.year
+                                ? `<span class="year">
+                                    (${escapeHtml(movie.year)})
+                                   </span>`
+                                : ""
+                        }
+
+                    </div>
+
+
+                    <div class="metadata-stats">
+
+                        ${
+                            score !== null
+
+                                ? `
+
+                                    <div class="metadata-badge">
+
+                                        <span class="metadata-label">
+                                            TMDB
+                                        </span>
+
+                                        <span class="score">
+                                            ★ ${score.toFixed(1)}/10
+                                        </span>
+
+                                    </div>
+
+                                  `
+
+                                : ""
+
+                        }
+
+
+                        ${
+                            mpaaRating
+
+                                ? `
+
+                                    <div class="metadata-badge">
+
+                                        <span class="metadata-label">
+                                            Rating
+                                        </span>
+
+                                        <strong>
+                                            ${escapeHtml(mpaaRating)}
+                                        </strong>
+
+                                    </div>
+
+                                  `
+
+                                : ""
+
+                        }
+
+
+                        ${
+                            imdbId
+
+                                ? `
+
+                                    <div class="metadata-badge">
+
+                                        <a
+                                            class="imdb-link"
+                                            href="https://www.imdb.com/title/${encodeURIComponent(imdbId)}/"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            onclick="event.stopPropagation()"
+                                        >
+                                            IMDb ↗
+                                        </a>
+
+                                    </div>
+
+                                  `
+
+                                : ""
+
+                        }
+
+                    </div>
+
+
+                    ${
+                        overview
+
+                            ? `
+
+                                <div class="plot">
+
+                                    ${escapeHtml(overview)}
+
+                                </div>
+
+                              `
+
+                            : `
+
+                                <div class="plot-empty">
+
+                                    No plot summary available.
+
+                                </div>
+
+                              `
+
+                    }
+
+                </div>
+
+            </div>
+
+        `;
+
+
+        /*
+         * --------------------------------------------------------
+         * Plex availability
+         * --------------------------------------------------------
+         */
+
+        details += `
+
+            <div class="availability-heading">
+
+                Plex availability
+
+            </div>
+
+        `;
+
+
+        if (available) {
+
+            details +=
+                locations
+                    .map(location => {
+
+                        const server =
+                            location.server ||
+                            "Unknown server";
+
+
+                        const library =
+                            location.library ||
+                            "Unknown library";
+
+
+                        const plexTitle =
+                            location.title ||
+                            title;
+
+
+                        const plexYear =
+                            location.year ||
+                            "";
+
+
+                        return `
+
+                            <div class="location">
+
+                                <div class="server">
+
+                                    ${escapeHtml(server)}
+
+                                </div>
+
+
+                                <div class="library">
+
+                                    ${escapeHtml(library)}
+
+                                </div>
+
+
+                                <div class="plex-meta">
+
+                                    Plex title:
+                                    ${escapeHtml(plexTitle)}
+
+                                    ${
+                                        plexYear
+                                            ? `(${escapeHtml(plexYear)})`
+                                            : ""
+                                    }
+
+                                </div>
+
+                            </div>
+
+                        `;
+
+                    })
+                    .join("");
+
+        } else {
+
+            details += `
+
+                <div class="not-found">
+
+                    This movie was not found
+                    in any accessible Plex
+                    movie library.
+
+                </div>
+
+            `;
+
+        }
+
+
+        /*
+         * --------------------------------------------------------
+         * Complete movie element
+         * --------------------------------------------------------
+         */
+
+        return `
+
+            <article class="movie">
+
+                <div class="movie-header">
+
+                    <div
+                        class="status ${
+                            available
+                                ? "available"
+                                : "unavailable"
+                        }"
+                    ></div>
+
+
+                    <div class="movie-title">
+
+                        <span class="title">
+
+                            ${escapeHtml(title)}
+
+                        </span>
+
+
+                        <span class="year">
+
+                            ${year}
+
+                        </span>
+
+                    </div>
+
+
+                    <div class="plex-count">
+
+                        ${
+                            available
+
+                                ? `${count} location${
+                                    count === 1
+                                        ? ""
+                                        : "s"
+                                }`
+
+                                : "Not available"
+                        }
+
+                    </div>
+
+
+                    <div class="arrow">
+
+                        ▶
+
+                    </div>
+
+                </div>
+
+
+                <div class="movie-details">
+
+                    ${details}
+
+                </div>
+
+            </article>
+
+        `;
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * Escape text before inserting it into HTML.
+     * ------------------------------------------------------------
+     */
+
+    function escapeHtml(value) {
+
+        return String(value)
+
+            .replaceAll(
+                "&",
+                "&amp;"
+            )
+
+            .replaceAll(
+                "<",
+                "&lt;"
+            )
+
+            .replaceAll(
+                ">",
+                "&gt;"
+            )
+
+            .replaceAll(
+                '"',
+                "&quot;"
+            )
+
+            .replaceAll(
+                "'",
+                "&#039;"
+            );
+
+    }
+
+
+    /*
+     * ------------------------------------------------------------
+     * Search
+     * ------------------------------------------------------------
+     */
+
+    document.getElementById(
+        "search"
+    ).addEventListener(
+        "input",
+        event => {
+
+            currentSearch =
+                event.target.value.trim();
+
+            render();
+
+        }
+    );
+
+
+    /*
+     * ------------------------------------------------------------
+     * Filter buttons
+     * ------------------------------------------------------------
+     */
+
+    document.querySelectorAll(
+        ".filter"
+    ).forEach(button => {
+
+        button.addEventListener(
+            "click",
+            () => {
+
+                currentFilter =
+                    button.dataset.filter;
+
+
+                document.querySelectorAll(
+                    ".filter"
+                ).forEach(
+                    item =>
+                        item.classList.remove(
+                            "active"
+                        )
+                );
+
+
+                button.classList.add(
+                    "active"
+                );
+
+
+                render();
+
+            }
+        );
+
+    });
+
+
+    /*
+     * ------------------------------------------------------------
+     * Sort
+     * ------------------------------------------------------------
+     */
+
+    document.getElementById(
+        "sort"
+    ).addEventListener(
+        "change",
+        render
+    );
+
+
+    /*
+     * ------------------------------------------------------------
+     * Start
+     * ------------------------------------------------------------
+     */
+
+    loadResults();
+
+</script>
+
+</body>
+</html>

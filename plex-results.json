@@ -1,0 +1,1231 @@
+{
+  "version": 2,
+  "source": "Plex + TMDB",
+  "input_file": "movies.json",
+  "movies_requested": 58,
+  "movies_with_imdb_ids": 58,
+  "movies_found": 18,
+  "movies_not_found": 40,
+  "movies": [
+    {
+      "input": "Return to oz",
+      "title": "Return to Oz",
+      "year": 1985,
+      "tmdb_id": 13155,
+      "imdb_id": "tt0089908",
+      "tmdb": {
+        "overview": "Dorothy, saved from a psychiatric experiment by a mysterious girl, finds herself back in the land of her dreams, and makes delightful new friends, and dangerous new enemies.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/dyMwaXA9nVhPiA5wYHsvfUAnbaB.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.707,
+        "imdb_id": "tt0089908",
+        "tmdb_id": 13155
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the secret of nimh",
+      "title": "The Secret of NIMH",
+      "year": 1982,
+      "tmdb_id": 11704,
+      "imdb_id": "tt0084649",
+      "tmdb": {
+        "overview": "A widowed field mouse must move her family -- including an ailing son -- to escape a farmer's plow. Aided by a crow and a pack of superintelligent, escaped lab rats, the brave mother struggles to transplant her home to firmer ground.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/prNrnOKlkV9wl5Sl3zwHu1f3t2z.jpg",
+        "mpaa_rating": "G",
+        "score": 7.4,
+        "imdb_id": "tt0084649",
+        "tmdb_id": 11704
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the neverending story",
+      "title": "The NeverEnding Story",
+      "year": 1984,
+      "tmdb_id": 34584,
+      "imdb_id": "tt0088323",
+      "tmdb": {
+        "overview": "While hiding from bullies in his school's attic, a young boy discovers the extraordinary land of Fantasia, through a magical book called The Neverending Story. The book tells the tale of Atreyu, a young warrior who, with the help of a luck dragon named Falkor, must save Fantasia from the destruction of The Nothing.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/ddYCa91iDXfJCxaqSYzwi2fjfnl.jpg",
+        "mpaa_rating": "PG",
+        "score": 7.225,
+        "imdb_id": "tt0088323",
+        "tmdb_id": 34584
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the last unicorn",
+      "title": "The Last Unicorn",
+      "year": 1982,
+      "tmdb_id": 10150,
+      "imdb_id": "tt0084237",
+      "tmdb": {
+        "overview": "A unicorn learns from a riddle-speaking butterfly that she is supposedly the last of her kind, all the others having been herded away by the monstrous Red Bull. The unicorn sets out to discover the truth behind the butterfly's words. She is eventually joined on her quest by Schmendrick, a second-rate magician, and Molly Grue, a middle-aged woman who dreamed all her life of seeing a unicorn. Their journey leads them far from home, all the way to the castle of King Haggard.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/MRHFtXTjxC74MGCzHACcuqvHiw.jpg",
+        "mpaa_rating": "G",
+        "score": 7.3,
+        "imdb_id": "tt0084237",
+        "tmdb_id": 10150
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "gremlins",
+      "title": "Gremlins",
+      "year": 1984,
+      "tmdb_id": 927,
+      "imdb_id": "tt0087363",
+      "tmdb": {
+        "overview": "After receiving an exotic small animal as a Christmas gift, a young man inadvertently breaks three important rules concerning his new pet, which unleashes a horde of malevolently mischievous creatures on a small town.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/6m0F7fsXjQvUbCZrPWcJNrjvIui.jpg",
+        "mpaa_rating": "PG",
+        "score": 7.144,
+        "imdb_id": "tt0087363",
+        "tmdb_id": 927
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Gremlins",
+          "year": 1984,
+          "rating_key": "3531",
+          "plex_guid": "plex://movie/5d7768297228e5001f1dd174"
+        },
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Gremlins",
+          "year": 1984,
+          "rating_key": "1757",
+          "plex_guid": "plex://movie/5d7768297228e5001f1dd174"
+        }
+      ]
+    },
+    {
+      "input": "gremlins 2",
+      "title": "Gremlins 2: The New Batch",
+      "year": 1990,
+      "tmdb_id": 928,
+      "imdb_id": "tt0099700",
+      "tmdb": {
+        "overview": "Young sweethearts Billy and Kate move to the Big Apple, land jobs in a high-tech office park and soon reunite with the friendly and lovable Gizmo. But a series of accidents creates a whole new generation of Gremlins. The situation worsens when the devilish green creatures invade a top-secret laboratory and develop genetically altered powers, making them even harder to destroy!",
+        "poster_url": "https://image.tmdb.org/t/p/w500/35F5yD7MljvBE2AC0NHAVCoPGEi.jpg",
+        "mpaa_rating": "PG-13",
+        "score": 6.523,
+        "imdb_id": "tt0099700",
+        "tmdb_id": 928
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Gremlins 2: The New Batch",
+          "year": 1990,
+          "rating_key": "3532",
+          "plex_guid": "plex://movie/5d7768285af944001f1f708b"
+        },
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Gremlins 2: The New Batch",
+          "year": 1990,
+          "rating_key": "1763",
+          "plex_guid": "plex://movie/5d7768285af944001f1f708b"
+        }
+      ]
+    },
+    {
+      "input": "the witches",
+      "title": "The Witches",
+      "year": 1990,
+      "tmdb_id": 10166,
+      "imdb_id": "tt0100944",
+      "tmdb": {
+        "overview": "While staying at a hotel in England with his grandmother, Helga, a young boy named Luke inadvertently spies on a convention of witches. The Grand High Witch reveals a plan to turn all children into mice via a magical formula. When they discover the eavesdropper, the witches test the formula on him. Now, with the help of Helga and hotel manager Mr Stringer, Luke the mouse must fight back against the witches.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/mPYBjVkeHakkPGY7WaKyyNU4RWm.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.947,
+        "imdb_id": "tt0100944",
+        "tmdb_id": 10166
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "The Witches",
+          "year": 1990,
+          "rating_key": "68498",
+          "plex_guid": "plex://movie/5d9f34fa6fc551001ef7fb2a"
+        }
+      ]
+    },
+    {
+      "input": "the adventures of baron munchausen",
+      "title": "The Adventures of Baron Munchausen",
+      "year": 1988,
+      "tmdb_id": 14506,
+      "imdb_id": "tt0096764",
+      "tmdb": {
+        "overview": "An account of Baron Munchausen's supposed travels and fantastical experiences with his band of misfits.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/oiOwGRqwrKpg1EMUlPgRjVC49bn.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.986,
+        "imdb_id": "tt0096764",
+        "tmdb_id": 14506
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "The Adventures of Baron Munchausen",
+          "year": 1988,
+          "rating_key": "8889",
+          "plex_guid": "plex://movie/5d77683b6f4521001ea9d3e3"
+        }
+      ]
+    },
+    {
+      "input": "the watcher in the woods",
+      "title": "The Watcher in the Woods",
+      "year": 1980,
+      "tmdb_id": 21970,
+      "imdb_id": "tt0081738",
+      "tmdb": {
+        "overview": "After an American family moves to an old country manor in rural England, one of the daughters is tormented by the spirit of the owner's long lost daughter, who mysteriously disappeared 30 years ago during a solar eclipse.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/eamuIAxT8SOZ4vmGINLS83z2PYw.jpg",
+        "mpaa_rating": "PG",
+        "score": 5.914,
+        "imdb_id": "tt0081738",
+        "tmdb_id": 21970
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the adventures of mark twain",
+      "title": "The Adventures of Mark Twain",
+      "year": 1985,
+      "tmdb_id": 19947,
+      "imdb_id": "tt0088678",
+      "tmdb": {
+        "overview": "Based on elements from the stories of Mark Twain, this feature-length Claymation fantasy follows the adventures of Tom Sawyer, Becky Thatcher and Huck Finn as they stowaway aboard the interplanetary balloon of Mark Twain. Twain, disgusted with the human race, is intent upon finding Halley's Comet and crashing into it, achieving his \"destiny.\" It's up to Tom, Becky, and Huck to convince him that his judgment is wrong and that he still has much to offer humanity that might make a difference. Their efforts aren't just charitable; if they fail, they will share Twain's fate. Along the way, they use a magical time portal to get a detailed overview of the Twain philosophy, observing the \"historical\" events that inspired his works.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/wUYyl69qvIZOTuRJnwK07BbYSyy.jpg",
+        "mpaa_rating": "G",
+        "score": 6.741,
+        "imdb_id": "tt0088678",
+        "tmdb_id": 19947
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "The Adventures of Mark Twain",
+          "year": 1985,
+          "rating_key": "3702",
+          "plex_guid": "plex://movie/5d776844f59e58002189a76b"
+        }
+      ]
+    },
+    {
+      "input": "the monster squad",
+      "title": "The Monster Squad",
+      "year": 1987,
+      "tmdb_id": 13509,
+      "imdb_id": "tt0093560",
+      "tmdb": {
+        "overview": "Count Dracula returns to the world of humans accompanied by Frankenstein's Monster, the Wolfman, the Mummy, and the Gillman. The uglies are in search of a powerful amulet that will grant them the ability to rule the world. A group of horror-loving heroes are the only ones daring to stand in their way.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/8EVuqCcqFzQvc7X8E3fx3w4B5Td.jpg",
+        "mpaa_rating": "PG-13",
+        "score": 6.724,
+        "imdb_id": "tt0093560",
+        "tmdb_id": 13509
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "ernest scared stupid",
+      "title": "Ernest Scared Stupid",
+      "year": 1991,
+      "tmdb_id": 32685,
+      "imdb_id": "tt0101821",
+      "tmdb": {
+        "overview": "Well-intentioned, eternally bumbling Ernest P. Worrell accidentally releases an evil demon from its sacred tomb. As the demon flexes its power and goes on a ruinous rampage, good-guy Ernest tries to step in to save the town from mass destruction. Trouble is, a 200-year-old curse has scared Ernest stupid, and that means hilarity all around! So, kick back and let the laugh-ridden adventures begin.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/qnMtX8eKFFrJVEPZijFZqzDbckK.jpg",
+        "mpaa_rating": "PG",
+        "score": 5.352,
+        "imdb_id": "tt0101821",
+        "tmdb_id": 32685
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Ernest Scared Stupid",
+          "year": 1991,
+          "rating_key": "2811",
+          "plex_guid": "plex://movie/5d9f356c4441b1001fa0ed16"
+        }
+      ]
+    },
+    {
+      "input": "the halloween tree",
+      "title": "The Halloween Tree",
+      "year": 1993,
+      "tmdb_id": 45974,
+      "imdb_id": "tt0191173",
+      "tmdb": {
+        "overview": "Four children learn the origins of Halloween customs while trying to save the life of their friend.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/phcM1B7neu6g7ysw9CmIo35Qida.jpg",
+        "mpaa_rating": "G",
+        "score": 6.696,
+        "imdb_id": "tt0191173",
+        "tmdb_id": 45974
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the willies",
+      "title": "The Willies",
+      "year": 1990,
+      "tmdb_id": 25088,
+      "imdb_id": "tt0103268",
+      "tmdb": {
+        "overview": "Two brothers camping with their cousin try to frighten each other by telling stories. They start with urban legends, but then there are two main narrations: one involves strange happenings at an elementary school; the other, a teenage boy with a peculiar interest.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/vWVE0ne2VeobovFFlw4I9NImIho.jpg",
+        "mpaa_rating": "PG-13",
+        "score": 5.739,
+        "imdb_id": "tt0103268",
+        "tmdb_id": 25088
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "lady in white",
+      "title": "Lady in White",
+      "year": 1988,
+      "tmdb_id": 49365,
+      "imdb_id": "tt0095484",
+      "tmdb": {
+        "overview": "Locked in a school closet during Halloween 1962, young Frank witnesses the ghost of a young girl and the man who murdered her years ago.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/AevfLQ5c0ZGtO3clHawg9L2XAQ2.jpg",
+        "mpaa_rating": "PG-13",
+        "score": 6.116,
+        "imdb_id": "tt0095484",
+        "tmdb_id": 49365
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the peanut butter solution",
+      "title": "The Peanut Butter Solution",
+      "year": 1985,
+      "tmdb_id": 19425,
+      "imdb_id": "tt0089789",
+      "tmdb": {
+        "overview": "Peanut butter is the secret ingredient for magic potions made by two friendly ghosts. Eleven-year-old Michael loses all of his hair when he gets a fright and uses the potion to get his hair back, but too much peanut butter causes things to get a bit hairy.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/p2DgMuccpBd5VFQA87JSMeaXw7V.jpg",
+        "mpaa_rating": "PG",
+        "score": 5.685,
+        "imdb_id": "tt0089789",
+        "tmdb_id": 19425
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "something wicked this way comes",
+      "title": "Something Wicked This Way Comes",
+      "year": 1983,
+      "tmdb_id": 24808,
+      "imdb_id": "tt0086336",
+      "tmdb": {
+        "overview": "In a small American town, a diabolical circus arrives, granting wishes for the townsfolk, but twisted as only the esteemed Mr. Dark can make them. Can two young boys overcome the worst the devil himself can deal out?",
+        "poster_url": "https://image.tmdb.org/t/p/w500/94dMO6kAawyFUk0sCDGIjAnchED.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.5,
+        "imdb_id": "tt0086336",
+        "tmdb_id": 24808
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "legend",
+      "title": "Legend",
+      "year": 1985,
+      "tmdb_id": 11976,
+      "imdb_id": "tt0089469",
+      "tmdb": {
+        "overview": "Set in a timeless mythical forest inhabited by fairies, goblins, unicorns and mortals, this fantastic story follows a mystical forest dweller, chosen by fate, to undertake a heroic quest. He must save the beautiful Princess  Lili and defeat the demonic Lord of Darkness, or the world will be plunged into a never-ending ice age.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/6n3PQSYpZRK5YPk2w8JEwED7AZk.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.258,
+        "imdb_id": "tt0089469",
+        "tmdb_id": 11976
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Legend",
+          "year": 1985,
+          "rating_key": "25788",
+          "plex_guid": "plex://movie/5d7768388718ba001e3154dc"
+        }
+      ]
+    },
+    {
+      "input": "mio in the land of faraway",
+      "title": "Mio in the Land of Faraway",
+      "year": 1987,
+      "tmdb_id": 14499,
+      "imdb_id": "tt0093543",
+      "tmdb": {
+        "overview": "Under the watch of his unkind realtives, lonely Bosse's luck is changed when he is sent to the land where his real father is the King. In that country, he sets out on a quest, together with his new friend, to destroy the evil Knight Kato.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/3C5JsV8Id21pVfOAmWBZjrMZ6GZ.jpg",
+        "mpaa_rating": null,
+        "score": 6.0,
+        "imdb_id": "tt0093543",
+        "tmdb_id": 14499
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the princess and the goblin",
+      "title": "The Princess and the Goblin",
+      "year": 1991,
+      "tmdb_id": 42001,
+      "imdb_id": "tt0107875",
+      "tmdb": {
+        "overview": "The story is about the Princess Irene and a young warrior boy named Curty. Irene must use her magic power to fight off goblins and save the kingdom.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/gWXeEzpOavcmv1Ca8sjqkorfuIO.jpg",
+        "mpaa_rating": "G",
+        "score": 5.816,
+        "imdb_id": "tt0107875",
+        "tmdb_id": 42001
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the pagemaster",
+      "title": "The Pagemaster",
+      "year": 1994,
+      "tmdb_id": 15139,
+      "imdb_id": "tt0110763",
+      "tmdb": {
+        "overview": "Rich knows a lot about accidents. So much so, he is scared to do anything that might endanger him, like riding his bike, or climbing into his treehouse. While in an old library, he is mystically transported into the unknown world of books, and he has to try and get home again.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/iIWUuCjN8VND7BDugvf45LveA6p.jpg",
+        "mpaa_rating": "G",
+        "score": 6.401,
+        "imdb_id": "tt0110763",
+        "tmdb_id": 15139
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "warriors of virtue",
+      "title": "Warriors of Virtue",
+      "year": 1997,
+      "tmdb_id": 49478,
+      "imdb_id": "tt0120479",
+      "tmdb": {
+        "overview": "A young boy is whisked away to the mythical land of Tao where he becomes the center of a conflict between an evil lord and a group of animal warriors.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/8fT8cttGyXx36P24W0tum2QxsLf.jpg",
+        "mpaa_rating": "PG",
+        "score": 4.753,
+        "imdb_id": "tt0120479",
+        "tmdb_id": 49478
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the magic voyage",
+      "title": "The Magic Voyage",
+      "year": 1992,
+      "tmdb_id": 110812,
+      "imdb_id": "tt0103609",
+      "tmdb": {
+        "overview": "Christopher Columbus decides to go on a journey to prove that the Earth is not flat. His companion is a smart wood worm who's on a quest of his own: to save a beautiful fairy princess from the evil lord Swarm and his insect army.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/Ap3puVC9opCv3JwRYDEFFicuWlO.jpg",
+        "mpaa_rating": null,
+        "score": 4.8,
+        "imdb_id": "tt0103609",
+        "tmdb_id": 110812
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the adventures of huck finn",
+      "title": "The Adventures of Huck Finn",
+      "year": 1993,
+      "tmdb_id": 34723,
+      "imdb_id": "tt0106223",
+      "tmdb": {
+        "overview": "Mischievous Huck Finn is unnerved when his father, reemerging after years away, kidnaps him in an attempt to take away a $600 inheritance from his late mother. Fearing for his life, Huck fakes his own death and escapes. He soon runs into his friend, Jim, a slave fleeing his master. Together, the pair embarks on a raft journey down the Mississippi River, staying ahead of pursuers who blame the slave for Huck's alleged murder.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/8VpQZ43hdaTUmkMoe2CnED1Y2fS.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.179,
+        "imdb_id": "tt0106223",
+        "tmdb_id": 34723
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "watership down",
+      "title": "Watership Down",
+      "year": 1978,
+      "tmdb_id": 11837,
+      "imdb_id": "tt0078480",
+      "tmdb": {
+        "overview": "When the warren belonging to a community of rabbits is threatened, a brave group led by Fiver, Bigwig, Blackberry and Hazel leave their homeland in a search of a safe new haven.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/q9ZcNxfquJbMTd6UfhAlJbmLBts.jpg",
+        "mpaa_rating": "PG",
+        "score": 7.19,
+        "imdb_id": "tt0078480",
+        "tmdb_id": 11837
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the plague dogs",
+      "title": "The Plague Dogs",
+      "year": 1982,
+      "tmdb_id": 30060,
+      "imdb_id": "tt0084509",
+      "tmdb": {
+        "overview": "Two dogs, Rowf and Snitter, struggle to survive in the countryside after escaping from an animal research laboratory. They're pursued by search parties and then the military after rumours spread that they could be carrying the bubonic plague.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/aPlkqs5cmOgaZJhekW5CvGywSkx.jpg",
+        "mpaa_rating": "NR",
+        "score": 7.817,
+        "imdb_id": "tt0084509",
+        "tmdb_id": 30060
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the brave little toaster",
+      "title": "The Brave Little Toaster",
+      "year": 1987,
+      "tmdb_id": 19933,
+      "imdb_id": "tt0092695",
+      "tmdb": {
+        "overview": "A group of dated appliances, finding themselves stranded in a summer home that their family had just sold, decide to seek out their eight year old 'master'.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/mEZcPMNRqTcotOZSttN5MtmJbu1.jpg",
+        "mpaa_rating": "G",
+        "score": 6.9,
+        "imdb_id": "tt0092695",
+        "tmdb_id": 19933
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "The Brave Little Toaster",
+          "year": 1987,
+          "rating_key": "3720",
+          "plex_guid": "plex://movie/5d7768446f4521001ea9f179"
+        }
+      ]
+    },
+    {
+      "input": "all dogs go to heaven",
+      "title": "All Dogs Go to Heaven",
+      "year": 1989,
+      "tmdb_id": 11497,
+      "imdb_id": "tt0096787",
+      "tmdb": {
+        "overview": "When a casino-owning dog named Charlie is murdered by his rival Carface, he finds himself in Heaven. Wanting to get back at his killer, he cons his way back to the living with the warning that doing so damns him to Hell. Once back, he teams with his old partner, Itchy, to prep his retaliation. He stumbles upon an orphan girl who can talk to the animals, thus allowing him to get the inside info on the races to ensure his wins to finance his plans. However, all the while, he is still haunted by nightmares of what's waiting for him on the other side unless he can prove that he is worthy of Heaven again.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/nmWh1NglDinfkHD9zCNqGWyhl7Q.jpg",
+        "mpaa_rating": "G",
+        "score": 6.822,
+        "imdb_id": "tt0096787",
+        "tmdb_id": 11497
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "rock-a-doodle",
+      "title": "Rock-A-Doodle",
+      "year": 1991,
+      "tmdb_id": 20421,
+      "imdb_id": "tt0102802",
+      "tmdb": {
+        "overview": "Chanticleer is a foolhardy farm rooster who believes his crows can actually make the sun come up and shine. When the sun rises one morning without Chanticleer's crow, he leaves the farm in disgrace and runs off to become a rock 'n' roll singer. But in his absence, a sinister, sunshine-hating owl prepares to take over.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/q5xSS8MNmrwR3em6VB6OC3992d6.jpg",
+        "mpaa_rating": "G",
+        "score": 6.2,
+        "imdb_id": "tt0102802",
+        "tmdb_id": 20421
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "we're back! a dinosaur's story",
+      "title": "We're Back! A Dinosaur's Story",
+      "year": 1993,
+      "tmdb_id": 18890,
+      "imdb_id": "tt0108526",
+      "tmdb": {
+        "overview": "Captain New Eyes travels back in time and feeds dinosaurs his Brain Grain cereal, which makes them intelligent and non-violent. They agree to go to the \"Middle Future\" in order to grant the wishes of children in New York City. They are to meet Dr. Bleeb of the Museum of Natural History, but get sidetracked with their new children friends and run into the Captain's evil brother, Professor Screweyes.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/iyFmhYlioe3PDZjSKWtcIhu5R02.jpg",
+        "mpaa_rating": "G",
+        "score": 6.097,
+        "imdb_id": "tt0108526",
+        "tmdb_id": 18890
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the flight of dragons",
+      "title": "The Flight of Dragons",
+      "year": 1982,
+      "tmdb_id": 27273,
+      "imdb_id": "tt0083951",
+      "tmdb": {
+        "overview": "The realm of magic is being threatened by the realm of logic, so the green wizard, Carolinus, decides to shield it for all time. Ommadon, the evil red wizard, stands in his way. Carolinus then calls for a quest that is to be led by a man named Peter Dickinson, who is the first man of both the realms of science and magic. It is Peter's job to defeat Ommadon.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/pcGDwxEZW5ywTNdvSyTH2Bs49kw.jpg",
+        "mpaa_rating": null,
+        "score": 6.7,
+        "imdb_id": "tt0083951",
+        "tmdb_id": 27273
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the mouse and his child",
+      "title": "The Mouse and His Child",
+      "year": 1977,
+      "tmdb_id": 37049,
+      "imdb_id": "tt0076416",
+      "tmdb": {
+        "overview": "A mouse and his child, the two parts of a single small wind-up toy, go on a quest to become \"self-winding\".",
+        "poster_url": "https://image.tmdb.org/t/p/w500/6NEExXlGqwsIhw30eVKzLG0BPYo.jpg",
+        "mpaa_rating": "G",
+        "score": 6.143,
+        "imdb_id": "tt0076416",
+        "tmdb_id": 37049
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the goonies",
+      "title": "The Goonies",
+      "year": 1985,
+      "tmdb_id": 9340,
+      "imdb_id": "tt0089218",
+      "tmdb": {
+        "overview": "Young teen Mikey Walsh and his friends set off on a quest to find Pirate One-Eyed Willie's treasure in hopes of saving their homes from demolition. However, on their quest to find the treasure, they run into a family of recently escaped criminals, determined to capture the kids and reach the treasure first.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/eBU7gCjTCj9n2LTxvCSIXXOvHkD.jpg",
+        "mpaa_rating": "PG",
+        "score": 7.514,
+        "imdb_id": "tt0089218",
+        "tmdb_id": 9340
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "The Goonies",
+          "year": 1985,
+          "rating_key": "9522",
+          "plex_guid": "plex://movie/5d7768325af944001f1f9435"
+        },
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "The Goonies",
+          "year": 1985,
+          "rating_key": "80438",
+          "plex_guid": "plex://movie/5d7768325af944001f1f9435"
+        }
+      ]
+    },
+    {
+      "input": "explorers",
+      "title": "Explorers",
+      "year": 1985,
+      "tmdb_id": 9872,
+      "imdb_id": "tt0089114",
+      "tmdb": {
+        "overview": "Middle schooler Ben spends his free time watching sci-fi films, playing video games and reading comic books. Surprisingly, his affinity for all things fantastical yields a real result – when he has a vivid dream about technology, his prodigy best friend Wolfgang manages to create a working spacecraft. Joined by their buddy Darren, the boys take off into outer space and encounter some very odd extraterrestrial life.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/oFJosj5ECYjf1jkvpTEjGNzPx2x.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.269,
+        "imdb_id": "tt0089114",
+        "tmdb_id": 9872
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the last starfighter",
+      "title": "The Last Starfighter",
+      "year": 1984,
+      "tmdb_id": 11884,
+      "imdb_id": "tt0087597",
+      "tmdb": {
+        "overview": "Video game expert Alex Rogan finds himself transported to another planet after conquering the video game The Last Starfighter, only to find out it was just a test. He was recruited to join the team of best Starfighters to defend their world from the attack.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/A7oAHTjtYnIEQjJs62IONRufooq.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.6,
+        "imdb_id": "tt0087597",
+        "tmdb_id": 11884
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "flight of the navigator",
+      "title": "Flight of the Navigator",
+      "year": 1986,
+      "tmdb_id": 10122,
+      "imdb_id": "tt0091059",
+      "tmdb": {
+        "overview": "12-year-old David is accidentally knocked out in the forest near his home, but when he awakens eight years have passed. His family is overjoyed to have him back, but is just as perplexed as he is that he hasn't aged. When a NASA scientist discovers a UFO nearby, David gets the chance to unravel the mystery and recover the life he lost.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/tdRgQWMximj0tL6OWu9kRTtePmI.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.963,
+        "imdb_id": "tt0091059",
+        "tmdb_id": 10122
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "d.a.r.y.l.",
+      "title": "D.A.R.Y.L.",
+      "year": 1985,
+      "tmdb_id": 16248,
+      "imdb_id": "tt0088979",
+      "tmdb": {
+        "overview": "Daryl is a normal 10-year-old boy in many ways. However, unbeknown to his foster parents and friends, Daryl is actually a government-created robot with superhuman reflexes and mental abilities. Even his name has a hidden meaning -- it's actually an acronym for Data Analyzing Robot Youth Life-form. When the organization that created him deems the \"super soldier\" experiment a failure and schedules Daryl to be disassembled, it is up to a few rogue scientists to help him escape.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/87huhTOQijJy0pLhusZfest1MoZ.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.411,
+        "imdb_id": "tt0088979",
+        "tmdb_id": 16248
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "batteries not included",
+      "title": "*batteries not included",
+      "year": 1987,
+      "tmdb_id": 11548,
+      "imdb_id": "tt0092494",
+      "tmdb": {
+        "overview": "In a soon to be demolished block of apartments, the residents resist the criminal methods used to force them to leave so a greedy tycoon can build his new skyscraper. When tiny mechanical aliens land for a recharge, they decide to stay and help out.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/8NkpnpdLd8J6zCR8ZGTeGTur4uO.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.733,
+        "imdb_id": "tt0092494",
+        "tmdb_id": 11548
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "radio flyer",
+      "title": "Radio Flyer",
+      "year": 1992,
+      "tmdb_id": 20763,
+      "imdb_id": "tt0105211",
+      "tmdb": {
+        "overview": "A father reminisces about his childhood when he and his younger brother moved to a new town with their mother, her new husband and their dog, Shane. When the younger brother is subjected to physical abuse at the hands of their brutal stepfather, Mike decides to convert their toy trolley, the \"Radio Flyer\", into a plane to fly him to safety.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/nQjCKrwWYH6ES0HrnkLkPXnOEp0.jpg",
+        "mpaa_rating": "PG-13",
+        "score": 6.995,
+        "imdb_id": "tt0105211",
+        "tmdb_id": 20763
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the good son",
+      "title": "The Good Son",
+      "year": 1993,
+      "tmdb_id": 9272,
+      "imdb_id": "tt0107034",
+      "tmdb": {
+        "overview": "A young boy stays with his aunt and uncle, and befriends his cousin who's the same age. But his cousin begins showing increasing signs of psychotic behavior.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/6jZ1eef6SCVSMb4o1pSHHq84Nyf.jpg",
+        "mpaa_rating": "R",
+        "score": 6.8,
+        "imdb_id": "tt0107034",
+        "tmdb_id": 9272
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "The Good Son",
+          "year": 1993,
+          "rating_key": "9516",
+          "plex_guid": "plex://movie/5d77683361141d001fb150ab"
+        }
+      ]
+    },
+    {
+      "input": "tank girl",
+      "title": "Tank Girl",
+      "year": 1995,
+      "tmdb_id": 9067,
+      "imdb_id": "tt0114614",
+      "tmdb": {
+        "overview": "After a comet disrupts the rain cycle of Earth, the planet has become a desolate, barren desert by the year 2033. With resources scarce, Kesslee, head of the powerful and evil Water & Power Corporation, the de facto government, has taken control of the water supply. Unwilling to cower under Kesslee's tyrannical rule, a pair of outlaws known as Tank Girl and Jet Girl rise up, joining the mysterious rebel Rippers to destroy the corrupt system.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/dpX63vJd6k5fMTudLaEOw9ffX8h.jpg",
+        "mpaa_rating": "R",
+        "score": 5.494,
+        "imdb_id": "tt0114614",
+        "tmdb_id": 9067
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Tank Girl",
+          "year": 1995,
+          "rating_key": "8737",
+          "plex_guid": "plex://movie/5d776832151a60001f24d203"
+        }
+      ]
+    },
+    {
+      "input": "heavy metal",
+      "title": "Heavy Metal",
+      "year": 1981,
+      "tmdb_id": 11827,
+      "imdb_id": "tt0082509",
+      "tmdb": {
+        "overview": "The embodiment of ultimate evil, a glowing orb terrorizes a young girl with bizarre stories of dark fantasy, eroticism and horror.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/atUtWrDlLzT1yeVK2EoYtvbS963.jpg",
+        "mpaa_rating": "R",
+        "score": 6.521,
+        "imdb_id": "tt0082509",
+        "tmdb_id": 11827
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Heavy Metal",
+          "year": 1981,
+          "rating_key": "3906",
+          "plex_guid": "plex://movie/5d7768372e80df001ebde9c8"
+        },
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Heavy Metal",
+          "year": 1981,
+          "rating_key": "68482",
+          "plex_guid": "plex://movie/5d7768372e80df001ebde9c8"
+        }
+      ]
+    },
+    {
+      "input": "the garbage pail kids movie",
+      "title": "The Garbage Pail Kids Movie",
+      "year": 1987,
+      "tmdb_id": 14443,
+      "imdb_id": "tt0093072",
+      "tmdb": {
+        "overview": "Crude, grotesque, pint-sized aliens known as the Garbage Pail Kids® help a young boy exact revenge on his bullies and win the girl of his dreams.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/v6PqKUptGhQjTTgqN2s2uPdNW0h.jpg",
+        "mpaa_rating": "PG",
+        "score": 3.492,
+        "imdb_id": "tt0093072",
+        "tmdb_id": 14443
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the dog who stopped the war",
+      "title": "The Dog Who Stopped the War",
+      "year": 1984,
+      "tmdb_id": 37168,
+      "imdb_id": "tt0087373",
+      "tmdb": {
+        "overview": "As the Christmas holidays begin, a group of 10 war-obsessed kids have a wave of inspiration: What if they spend the next two weeks engaged in a simulated war, armed only with shields, wooden swords, snowballs, and a fierce sense of competition? With a bounty chest waiting for the winners, the two sides gradually grow in size, and the war grows in importance, taking over all aspects of their lives.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/qcSY8yGixq5CgHmbljISWNDAkfy.jpg",
+        "mpaa_rating": "G",
+        "score": 7.0,
+        "imdb_id": "tt0087373",
+        "tmdb_id": 37168
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the fantastic adventures of unicorn",
+      "title": "The Fantastic Adventures of Unico",
+      "year": 1981,
+      "tmdb_id": 38563,
+      "imdb_id": "tt0083258",
+      "tmdb": {
+        "overview": "When Unico, a young unicorn, is banished from his family by a pantheon of manipulative gods, his powers of joy and happiness are tested as he explores the lands with his friends Beezle and Katy.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/fhyLXBFBEXKoidJvSYcajGfWBG1.jpg",
+        "mpaa_rating": null,
+        "score": 7.036,
+        "imdb_id": "tt0083258",
+        "tmdb_id": 38563
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the water babies",
+      "title": "The Water Babies",
+      "year": 1978,
+      "tmdb_id": 34467,
+      "imdb_id": "tt0078477",
+      "tmdb": {
+        "overview": "Grimes, an amoral chimney sweep, occasionally likes to steal valuables from his clients. One day, on the verge of being caught, he frames his young apprentice, Tom, for the crime. Tom runs away and jumps into a river where, instead of drowning, he finds himself transformed into a mystical aquatic creature. Swimming and breathing effortlessly, he discovers a colorful underwater world replete with creatures both cruel and kind.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/vpgFomQKyvpsxazK0SB5pB7S8xo.jpg",
+        "mpaa_rating": null,
+        "score": 6.25,
+        "imdb_id": "tt0078477",
+        "tmdb_id": 34467
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "teen wolf",
+      "title": "Teen Wolf",
+      "year": 1985,
+      "tmdb_id": 11824,
+      "imdb_id": "tt0090142",
+      "tmdb": {
+        "overview": "When a shy teenager's new-found powers help him score at basketball - and with the popular girls - he has some pretty hairy decisions to make.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/bv9rY9eoue2Hat6tcvrKVQ0ow8v.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.209,
+        "imdb_id": "tt0090142",
+        "tmdb_id": 11824
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the tin drum",
+      "title": "The Tin Drum",
+      "year": 1979,
+      "tmdb_id": 659,
+      "imdb_id": "tt0078875",
+      "tmdb": {
+        "overview": "In 1924, Oskar Matzerath is born in the Free City of Danzig. At age three, he falls down a flight of stairs and stops growing. In 1939, World War II breaks out.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/z4QsBWJbbBxct2zU7LnYSOw8UFz.jpg",
+        "mpaa_rating": "R",
+        "score": 6.952,
+        "imdb_id": "tt0078875",
+        "tmdb_id": 659
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "The Tin Drum",
+          "year": 1979,
+          "rating_key": "11144",
+          "plex_guid": "plex://movie/5d776827961905001eb9133f"
+        }
+      ]
+    },
+    {
+      "input": "the wizard of speed and time",
+      "title": "The Wizard of Speed and Time",
+      "year": 1989,
+      "tmdb_id": 44276,
+      "imdb_id": "tt0081766",
+      "tmdb": {
+        "overview": "A Hollywood filmmaker makes a short for an evil film studio. Unbeknownst to him, the producer has placed a bet of $25,000 that he won't come up with anything with a use. Luckily, our film creator gets the help of his friends.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/jSKFfau4MPTPgMN3Ljz8AyhIy7Q.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.3,
+        "imdb_id": "tt0081766",
+        "tmdb_id": 44276
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the hobbit",
+      "title": "The Hobbit",
+      "year": 1977,
+      "tmdb_id": 1362,
+      "imdb_id": "tt0077687",
+      "tmdb": {
+        "overview": "The story follows the adventures of Bilbo Baggins, a diminutive creative who resides in a place called Middle-Earth before he is compelled to go on a quest to find a treasure buried deep in the heart of the Lonely Mountain.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/2ohvyMPhvjftLrM6S6Ljr6QrL0u.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.58,
+        "imdb_id": "tt0077687",
+        "tmdb_id": 1362
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the lord of the rings",
+      "title": "The Lord of the Rings",
+      "year": 1978,
+      "tmdb_id": 123,
+      "imdb_id": "tt0077869",
+      "tmdb": {
+        "overview": "Young Hobbit Frodo Baggins is thrown into an amazing adventure when he's tasked with destroying the One Ring, created by the dark lord Sauron. Frodo must travel in a small fellowship of nine warriors and accomplices. But it won't be an easy journey for the Fellowship of the Ring, on the ultimate quest to rid Middle-earth of evil.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/liW0mjvTyLs7UCumaHhx3PpU4VT.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.577,
+        "imdb_id": "tt0077869",
+        "tmdb_id": 123
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "the return of the king",
+      "title": "The Return of the King",
+      "year": 1980,
+      "tmdb_id": 1361,
+      "imdb_id": "tt0079802",
+      "tmdb": {
+        "overview": "Two Hobbits struggle to destroy the Ring in Mount Doom while their friends desperately fight evil Lord Sauron's forces in a final battle.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/lTwUT4NsSyUQlHV20Mx3C96JHq4.jpg",
+        "mpaa_rating": "NR",
+        "score": 6.406,
+        "imdb_id": "tt0079802",
+        "tmdb_id": 1361
+      },
+      "available": false,
+      "available_on": []
+    },
+    {
+      "input": "fritz the cat",
+      "title": "Fritz the Cat",
+      "year": 1972,
+      "tmdb_id": 12593,
+      "imdb_id": "tt0068612",
+      "tmdb": {
+        "overview": "In late 1960s New York City, fed up with monotonous college life and police repression, free-spirited Fritz, an impenitent seducer and unrestrained party-animal, decides to explore the world. And just like that, as he flees NYC, heading to San Francisco, Fritz embarks on an endless adventure of illumination. Immersed in a world surrounded by drugs and sex, Fritz participates in mad orgies, brings about a revolution, incites mass urban riots, and crosses paths with drug-addled Nazi bikers.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/aZgHOb5QHvLLn4kxxBTVb0BNqW.jpg",
+        "mpaa_rating": "NC-17",
+        "score": 6.192,
+        "imdb_id": "tt0068612",
+        "tmdb_id": 12593
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Fritz the Cat",
+          "year": 1972,
+          "rating_key": "3211",
+          "plex_guid": "plex://movie/5d776838f59e5800218990b5"
+        }
+      ]
+    },
+    {
+      "input": "wizards",
+      "title": "Wizards",
+      "year": 1977,
+      "tmdb_id": 16220,
+      "imdb_id": "tt0076929",
+      "tmdb": {
+        "overview": "After the death of his mother, evil mutant wizard Blackwolf discovers long-lost military technologies. Full of ego and ambition, Blackwolf claims his mother's throne, assembles an army, and sets out to brainwash and conquer Earth. Meanwhile, Blackwolf's gentle twin brother, the bearded sage Avatar, calls upon his own magical abilities to foil Blackwolf's plans for world domination — even if it means eliminating his own flesh and blood.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/jeAxoYepnVirGe0H7pmwviSZYul.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.166,
+        "imdb_id": "tt0076929",
+        "tmdb_id": 16220
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Wizards",
+          "year": 1977,
+          "rating_key": "12165",
+          "plex_guid": "plex://movie/5d77683f2e80df001ebdf6d6"
+        },
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Wizards",
+          "year": 1977,
+          "rating_key": "4707",
+          "plex_guid": "plex://movie/5d77683f2e80df001ebdf6d6"
+        }
+      ]
+    },
+    {
+      "input": "fire and ice",
+      "title": "Fire and Ice",
+      "year": 1983,
+      "tmdb_id": 15035,
+      "imdb_id": "tt0085542",
+      "tmdb": {
+        "overview": "The villainous Nekron and his mother, Queen Juliana, plot against the human race from their frigid fortress. Creating mass destruction with huge glaciers, mother and son incur the wrath of Larn, a warrior whose entire village was destroyed by ice. When Nekron's underlings kidnap the beautiful Princess Teegra, Larn sets out to rescue her, assisted by the fierce and enigmatic Darkwolf.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/v0fi9KgmdsUsGtopxxRzbtQ5NIX.jpg",
+        "mpaa_rating": "PG",
+        "score": 6.69,
+        "imdb_id": "tt0085542",
+        "tmdb_id": 15035
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Fire and Ice",
+          "year": 1983,
+          "rating_key": "3023",
+          "plex_guid": "plex://movie/5d9f352068e4c8001fb5e750"
+        }
+      ]
+    },
+    {
+      "input": "cool world",
+      "title": "Cool World",
+      "year": 1992,
+      "tmdb_id": 14239,
+      "imdb_id": "tt0104009",
+      "tmdb": {
+        "overview": "While incarcerated for murder, cartoonist Jack Deebs found escape by creating Cool World, a series featuring a voluptuous femme fatale named Holli Would. But the artist becomes a prisoner of his own fantasies when Holli transports Jack into Cool World with a scheme to seduce him and bring herself to life. Hard-boiled detective Frank Harris – the only other human in Cool World – cautions Jack with the law: Noids (humans) don't have sex with doodles (cartoons). However, flesh proves weaker than ink as Holli takes human form in Las Vegas, staring in a trans-universal chase that threatens the destruction of both worlds.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/mqzRUHNtFwmgJCmSnvq3JnX0xgZ.jpg",
+        "mpaa_rating": "PG-13",
+        "score": 5.656,
+        "imdb_id": "tt0104009",
+        "tmdb_id": 14239
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "jewflix",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Cool World",
+          "year": 1992,
+          "rating_key": "1951",
+          "plex_guid": "plex://movie/5d9f35129dd5f4001e843786"
+        },
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Cool World",
+          "year": 1992,
+          "rating_key": "94483",
+          "plex_guid": "plex://movie/5d9f35129dd5f4001e843786"
+        }
+      ]
+    },
+    {
+      "input": "coonskin",
+      "title": "Coonskin",
+      "year": 1975,
+      "tmdb_id": 27716,
+      "imdb_id": "tt0071361",
+      "tmdb": {
+        "overview": "A multi-layered satire of race relations in America. Live-action sequences of a prison break bracket the animated tale of Brother Rabbit, Brother Bear, and Preacher Fox, who rise to the top of the crime ranks in Harlem by going up against a con-man, a racist cop, and the Mafia.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/3zrxUkbeLl2KmSIRywNTwiGOZ2y.jpg",
+        "mpaa_rating": "R",
+        "score": 6.118,
+        "imdb_id": "tt0071361",
+        "tmdb_id": 27716
+      },
+      "available": true,
+      "available_on": [
+        {
+          "server": "Dracflix 2.0",
+          "library": "Movies",
+          "library_key": "1",
+          "title": "Coonskin",
+          "year": 1975,
+          "rating_key": "1132",
+          "plex_guid": "plex://movie/5d776855103a2d001f56df07"
+        }
+      ]
+    },
+    {
+      "input": "hey good lookin",
+      "title": "Hey Good Lookin'",
+      "year": 1982,
+      "tmdb_id": 32202,
+      "imdb_id": "tt0084070",
+      "tmdb": {
+        "overview": "In 1953 Brooklyn, charismatic hood and The Stompers leader Vinnie Genzianna, his friend and second-in-command Crazy Shapiro, and their respective girlfriends Roz and Eva get wrapped up in an escalating conflict with the rival Black gang, The Chaplains, lead by Boogaloo Jones.",
+        "poster_url": "https://image.tmdb.org/t/p/w500/fIt4qBa6CPMcaC8MMjPsi14Llqs.jpg",
+        "mpaa_rating": "R",
+        "score": 5.5,
+        "imdb_id": "tt0084070",
+        "tmdb_id": 32202
+      },
+      "available": false,
+      "available_on": []
+    }
+  ]
+}
